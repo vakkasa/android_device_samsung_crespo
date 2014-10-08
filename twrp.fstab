@@ -1,0 +1,11 @@
+# mount point	fstype		device
+
+/system		f2fs		/dev/lvpool/system
+/cache		yaffs2		cache
+/data		f2fs		/dev/lvpool/userdata
+/misc 		mtd 		misc
+/boot		mtd		boot
+/recovery	mtd		recovery
+/bootloader	mtd		bootloader
+/radio		mtd		radio
+/efs            yaffs2        	efs   			flags=display="EFS";backup=1;canbewiped

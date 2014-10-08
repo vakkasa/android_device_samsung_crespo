@@ -1587,7 +1587,7 @@ ssize_t AudioHardware::AudioStreamInALSA::processFrames(void* buffer, ssize_t fr
                 {mProcBuf}
         };
         audio_buffer_t outBuf = {
-                frames - framesWr,
+                static_cast<size_t>(frames) - framesWr,
                 {(int16_t *)buffer + framesWr * mChannelCount}
         };
 
